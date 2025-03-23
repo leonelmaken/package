@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ChatScreen(),  // Remplacer le widget MyHomePage par ChatScreen
+      home: const ChatScreen(),  // Remplacer le widget MyHomePage par ChatScreen
       debugShowCheckedModeBanner: false,  // Désactiver la bande de débogage
     );
   }

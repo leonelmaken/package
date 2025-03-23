@@ -5,16 +5,18 @@ import 'dart:io';  // Pour la gestion des fichiers (images locales)
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/message_widget.dart';  // Importation du widget de message
-import '../services/message_service.dart'; // Importation du service de message
+// Importation du service de message
 
 class ChatScreen extends StatefulWidget {
+  const ChatScreen({super.key});
+
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
 
 class _ChatScreenState extends State<ChatScreen> {
   List<String> messages = [];
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
   String _imageUrl = '';  // Variable pour stocker l'URL de l'image
 
   // Fonction pour envoyer un message ou une image
@@ -37,7 +39,7 @@ class _ChatScreenState extends State<ChatScreen> {
       } catch (e) {
         print("Erreur lors du téléchargement de l'image: $e");
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("Erreur lors du téléchargement de l'image")),
+          const SnackBar(content: Text("Erreur lors du téléchargement de l'image")),
         );
       }
     }
@@ -56,7 +58,7 @@ class _ChatScreenState extends State<ChatScreen> {
     } else {
       print("Aucune image sélectionnée");
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Aucune image sélectionnée")),
+        const SnackBar(content: Text("Aucune image sélectionnée")),
       );
     }
   }
@@ -85,7 +87,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chat App'),
+        title: const Text('Chat App'),
         backgroundColor: Colors.blueAccent,
       ),
       body: Column(
@@ -107,8 +109,8 @@ class _ChatScreenState extends State<ChatScreen> {
                           ? GestureDetector(
                               onTap: () => _showImageInFullScreen(messages[index]),
                               child: Container(
-                                margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-                                padding: EdgeInsets.all(10.0),
+                                margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+                                padding: const EdgeInsets.all(10.0),
                                 decoration: BoxDecoration(
                                   color: Colors.grey[200],
                                   borderRadius: BorderRadius.circular(10.0),
@@ -141,13 +143,13 @@ class _ChatScreenState extends State<ChatScreen> {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(FontAwesomeIcons.image, color: Colors.blue),
+                  icon: const Icon(FontAwesomeIcons.image, color: Colors.blue),
                   onPressed: _pickImage,
                 ),
                 Expanded(
                   child: TextField(
                     controller: _controller,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Enter a message...',
                       border: OutlineInputBorder(),
                       contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 0.0),
@@ -155,7 +157,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.send, color: Colors.blue),
+                  icon: const Icon(Icons.send, color: Colors.blue),
                   onPressed: _sendMessage,
                 ),
               ],

@@ -2,7 +2,7 @@
 
 class MessageService {
   // Liste pour stocker les messages dans le service
-  List<String> _messages = [];
+  final List<String> _messages = [];
 
   // Fonction pour récupérer les messages
   List<String> getMessages() {
@@ -26,7 +26,7 @@ class MessageService {
   // Fonction pour simuler l'envoi de messages (par exemple, à un serveur)
   Future<void> sendMessage(String message) async {
     // Ici, vous pouvez ajouter la logique pour envoyer un message à un serveur ou effectuer une autre action
-    await Future.delayed(Duration(seconds: 1)); // Simuler un délai
+    await Future.delayed(const Duration(seconds: 1)); // Simuler un délai
     addMessage(message); // Ajouter le message après un délai simulé
   }
 }

@@ -1,0 +1,1 @@
+/home/maken/Documents/GitHub/package/chat_app/build/app/intermediates/cxx/RelWithDebInfo/91x5b524/obj/x86_64

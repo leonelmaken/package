@@ -1,0 +1,2 @@
+/home/maken/Documents/GitHub/package/chat_app/android/app/.cxx/RelWithDebInfo/31p703e3/x86_64/CMakeFiles/edit_cache.dir
+/home/maken/Documents/GitHub/package/chat_app/android/app/.cxx/RelWithDebInfo/31p703e3/x86_64/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/home/maken/Documents/GitHub/package/chat_app/build/app/intermediates/cxx/Debug/1q5s206m/obj/x86

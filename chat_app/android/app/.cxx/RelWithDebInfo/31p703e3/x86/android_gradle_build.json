@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "/home/maken/snap/flutter/common/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/maken/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/maken/Documents/GitHub/package/chat_app/android/app/.cxx/RelWithDebInfo/31p703e3/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/maken/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/maken/Documents/GitHub/package/chat_app/android/app/.cxx/RelWithDebInfo/31p703e3/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {},
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/home/maken/Android/Sdk/ndk/29.0.13113456/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/home/maken/Android/Sdk/ndk/29.0.13113456/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

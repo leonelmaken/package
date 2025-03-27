@@ -1,10 +1,17 @@
 # This is a generated file; do not edit or check into version control.
 file_selector_linux=/home/maken/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.3+2/
+flutter_media_store=/home/maken/.pub-cache/hosted/pub.dev/flutter_media_store-1.3.1/
+image_gallery_saver=/home/maken/.pub-cache/hosted/pub.dev/image_gallery_saver-2.0.3/
 path_provider=/home/maken/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
 path_provider_android=/home/maken/.pub-cache/hosted/pub.dev/path_provider_android-2.2.15/
 path_provider_foundation=/home/maken/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
 path_provider_linux=/home/maken/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
 path_provider_windows=/home/maken/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+permission_handler=/home/maken/.pub-cache/hosted/pub.dev/permission_handler-11.4.0/
+permission_handler_android=/home/maken/.pub-cache/hosted/pub.dev/permission_handler_android-12.1.0/
+permission_handler_apple=/home/maken/.pub-cache/hosted/pub.dev/permission_handler_apple-9.4.6/
+permission_handler_html=/home/maken/.pub-cache/hosted/pub.dev/permission_handler_html-0.1.3+5/
+permission_handler_windows=/home/maken/.pub-cache/hosted/pub.dev/permission_handler_windows-0.2.1/
 sqflite=/home/maken/.pub-cache/hosted/pub.dev/sqflite-2.4.1/
 sqflite_android=/home/maken/.pub-cache/hosted/pub.dev/sqflite_android-2.4.0/
 sqflite_darwin=/home/maken/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.1+1/

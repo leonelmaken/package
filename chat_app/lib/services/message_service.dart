@@ -1,32 +1,62 @@
-// message_service.dart
+// message_widget.dart
 
-class MessageService {
-  // Liste pour stocker les messages dans le service
-  final List<String> _messages = [];
+import 'package:flutter/material.dart';
 
-  // Fonction pour récupérer les messages
-  List<String> getMessages() {
-    return List.from(_messages);
-  }
+class MessageWidget extends StatelessWidget {
+  final String message; // Le contenu du message
+  final DateTime? timestamp; // L'heure du message (optionnel)
+  final bool isSentByMe; // Indique si le message est envoyé par l'utilisateur
 
-  // Fonction pour ajouter un message
-  void addMessage(String message) {
-    if (message.isNotEmpty) {
-      _messages.add(message);
-    }
-  }
+  const MessageWidget({
+    super.key,
+    required this.message,
+    this.timestamp, // Optionnel
+    required this.isSentByMe,
+  });
 
-  // Fonction pour supprimer un message (par exemple, après une suppression dans l'UI)
-  void deleteMessage(int index) {
-    if (index >= 0 && index < _messages.length) {
-      _messages.removeAt(index);
-    }
-  }
-
-  // Fonction pour simuler l'envoi de messages (par exemple, à un serveur)
-  Future<void> sendMessage(String message) async {
-    // Ici, vous pouvez ajouter la logique pour envoyer un message à un serveur ou effectuer une autre action
-    await Future.delayed(const Duration(seconds: 1)); // Simuler un délai
-    addMessage(message); // Ajouter le message après un délai simulé
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: isSentByMe ? Alignment.centerRight : Alignment.centerLeft,
+      child: Container(
+        margin: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
+        padding: const EdgeInsets.all(12.0),
+        constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width * 0.7, // Limiter la largeur
+        ),
+        decoration: BoxDecoration(
+          color: isSentByMe ? Colors.blue[200] : Colors.grey[300], // Couleur différente
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(isSentByMe ? 12.0 : 0.0),
+            topRight: Radius.circular(isSentByMe ? 0.0 : 12.0),
+            bottomLeft: const Radius.circular(12.0),
+            bottomRight: const Radius.circular(12.0),
+          ),
+        ),
+        child: Column(
+          crossAxisAlignment:
+              isSentByMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+          children: [
+            Text(
+              message,
+              style: TextStyle(
+                fontSize: 16.0,
+                color: isSentByMe ? Colors.black : Colors.black87,
+              ),
+            ),
+            if (timestamp != null) ...[
+              const SizedBox(height: 4.0), // Espacement entre le texte et l'horodatage
+              Text(
+                '${timestamp!.hour}:${timestamp!.minute}', // Format HH:mm
+                style: TextStyle(
+                  fontSize: 12.0,
+                  color: isSentByMe ? Colors.black54 : Colors.black45,
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
   }
 }
